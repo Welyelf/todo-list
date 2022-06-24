@@ -60,25 +60,27 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-md-6">
-                                        <div class="form-group mb-2">
-                                            <label for="exampleInputEmail1">Category</label>
+                                    <div class="col-md-8">
+                                    <label for="exampleInputEmail1">Category</label>
+                                        <div class="input-group-prepend mb-2">
                                             <select class="form-control" name="category">
                                                 <option>Choose Category</option> @foreach($categories as $category) <option value='{{ $category->id }}'>{{ $category->name }}</option> @endforeach
                                             </select>
+                                            <button type="submit" class="btn btn-primary">Add TODO</button>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Add To Do</button>
+                                        
                                     </div>
                                 </div>
                             </form>
                             <hr>
                             <h3>CATEGORIES</h3>
                             <form class="form-group row" action="{{url('category-add')}}" method="POST"> @csrf <div class="col-md-8">
-                                    <div class="form-group mb-2">
-                                        <label>Category Name</label>
-                                        <input type="text" class="form-control" id="categoryName" name="categoryName">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary mb-2">Add Category</button>
+                                <label>Category Name</label>
+                                <div class="input-group-prepend mb-2">
+                                    <input type="text" class="form-control" id="categoryName" name="categoryName">
+                                    <button type="submit" class="btn btn-primary">Add Category</button>
+                                </div>
+                                
                                 </div>
                             </form>
                             <div class="todo-list"> @foreach($categories as $category) <div class="todo-items">

@@ -94,4 +94,5 @@ div.button, div.checker, div.radio, div.selector, div.uploader {
 .btn-primary{
     background-color: #424349 !important;
     border-color: #424349 !important;
+    margin-left: 15px;
 }
